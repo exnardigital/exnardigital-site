@@ -176,3 +176,8 @@ thead th+th{text-align:center}
 @media (max-width:767px){.plans4{grid-template-columns:1fr}}
 .plans4 .badge{font-size:11.5px;letter-spacing:.02em;white-space:nowrap;padding:5px 10px}
 .plans4 .plan .limit{font-size:14px;white-space:nowrap;padding:4px 10px}
+
+.setup .price small{font-size:16px;font-weight:600;color:var(--muted)}
+.addon .note{font-size:14.5px;color:#333;margin:0 0 10px}
+.plan .small.es{margin-top:6px}
+.nw{white-space:nowrap}
