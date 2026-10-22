@@ -130,7 +130,27 @@ td{text-align:center}
 /* contact */
 .info .card h2{font-size:22px}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.booking-frame{width:100%;min-height:760px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}
+/* call-back request form */
+.cb-lead{margin-bottom:10px}
+.cb-es{max-width:760px;margin-bottom:26px}
+.cb-form{max-width:860px;padding:28px}
+.cb-form .fgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px 22px}
+.cb-form .field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.cb-form .full{grid-column:1/-1}
+.cb-form label,.cb-form legend{font-weight:700;font-size:15.5px;color:var(--ink)}
+.cb-form .req{color:var(--orange)}
+.cb-form .opt{font-weight:400;color:var(--muted)}
+.cb-form input[type=text],.cb-form input[type=tel],.cb-form input[type=email],.cb-form select{width:100%;box-sizing:border-box;font:inherit;font-size:16px;padding:11px 14px;border:1px solid #9fcbe0;border-radius:10px;background:#fff;color:var(--ink)}
+.cb-form input:focus,.cb-form select:focus{border-color:var(--deep);outline:3px solid var(--light);outline-offset:0}
+.cb-form fieldset{border:0;margin:0;padding:0}
+.cb-form legend{padding:0;margin-bottom:8px}
+.cb-form .checks{display:grid;grid-template-columns:repeat(3,1fr);gap:10px 18px}
+.cb-form .check{display:flex;align-items:flex-start;gap:8px;line-height:1.35;font-weight:600;font-size:15.5px}
+.cb-form .check input{width:18px;height:18px;flex:none;accent-color:var(--deep);margin:1px 0 0}
+.cb-form button.btn{cursor:pointer;font-family:inherit}
+.cb-form .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cb-thanks{max-width:860px;border-left:6px solid var(--blue)}
+@media (max-width:767px){.cb-form{padding:20px}.cb-form .fgrid{grid-template-columns:1fr}.cb-form .checks{grid-template-columns:1fr}}
 /* responsive */
 @media (max-width:1023px){.g4{grid-template-columns:repeat(2,1fr)}.addons ul{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:767px){
