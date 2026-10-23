@@ -86,12 +86,14 @@ html.gated .kit .dl-lock{display:block}
    <div class="fgrid">
     <div class="field"><label for="kf-name">Nombre · <span lang="en">Name</span> <span class="req">*</span></label><input id="kf-name" name="Name" type="text" autocomplete="name" required></div>
     <div class="field"><label for="kf-email">Correo · <span lang="en">Email</span> <span class="req">*</span></label><input id="kf-email" name="email" type="email" autocomplete="email" inputmode="email" required></div>
+    <div class="field"><label for="kf-phone">Teléfono <span class="opt">(opcional)</span> / <span lang="en">Phone <span class="opt">(optional)</span></span></label><input id="kf-phone" name="Phone" type="tel" autocomplete="tel" inputmode="tel"></div>
     <div class="field"><label for="kf-restaurant">Nombre del restaurante · <span lang="en">Restaurant name</span> <span class="opt">(opcional · <span lang="en">optional</span>)</span></label><input id="kf-restaurant" name="Restaurant" type="text" autocomplete="organization"></div>
     <div class="field"><label for="kf-lang">Idioma preferido · <span lang="en">Preferred language</span></label><select id="kf-lang" name="Preferred language"><option value="Español">Español</option><option value="English">English</option></select></div>
     <div class="field full"><label class="check"><input type="checkbox" name="Wants new prompts and guides" value="Yes"><span>Quiero recibir nuevos prompts y guías de Exnar Digital<br><span lang="en">I want new prompts and guides from Exnar Digital</span></span></label></div>
+    <div class="field full"><label class="check"><input type="checkbox" name="Agrees to be contacted about restaurant services" value="Yes"><span>Acepto que Exnar Digital me contacte sobre sus servicios para restaurantes<br><span lang="en">I agree Exnar Digital may contact me about its restaurant services</span></span></label></div>
    </div>
    <p class="mt"><button class="btn btn-dark" type="submit">Descargar ahora · <span lang="en">Download now</span></button></p>
-   <p class="privacy"><span>Solo usamos su correo para saber quién descarga los kits y, si marcó la casilla, enviarle nuevos prompts y guías. Sin spam.</span><span lang="en">We only use your email to know who downloads the kits and, if you checked the box, to send new prompts and guides. No spam.</span></p>
+   <p class="privacy"><span>Usamos sus datos para saber quién descarga los kits. Solo le enviaremos nuevos prompts y guías si marca la primera casilla, y solo le contactaremos sobre los servicios de Exnar si marca la segunda. Sin spam.</span><span lang="en">We use your info to know who downloads the kits. We only send new prompts and guides if you tick the first box, and only contact you about Exnar services if you tick the second box. No spam.</span></p>
   </form>
   <div id="kit-thanks" class="card cb-thanks signup-thanks" role="status" aria-live="polite" hidden>
    <p><strong>¡Gracias! Su descarga debería empezar sola. Si no, use los botones.</strong></p>
@@ -220,6 +222,8 @@ html.gated .kit .dl-lock{display:block}
   fd.forEach(function(v,k){data[k]=v});
   data['_subject']='Descarga de kit: '+lang;
   data['Wants new prompts and guides']=form.elements['Wants new prompts and guides'].checked?'Yes':'No';
+  data['Agrees to be contacted about restaurant services']=form.elements['Agrees to be contacted about restaurant services'].checked?'Yes':'No';
+  if(!data['Phone'])data['Phone']='(not provided)';
   data['Page']=location.href.split('?')[0];
   delete data['_next'];
   var ctl=window.AbortController?new AbortController():null,timer=setTimeout(function(){if(ctl)ctl.abort()},6000);
