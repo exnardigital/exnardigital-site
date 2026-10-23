@@ -193,3 +193,16 @@ thead th+th{text-align:center}
 .post-meta{font-size:14.5px;color:var(--muted);margin:0 0 14px}
 .post-back{margin-top:28px}
 .card h2 a{color:inherit;text-decoration:none}.card h2 a:hover{color:var(--deep)}
+/* blog media + prompts */
+.post video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#111;border-radius:var(--radius);margin:0 0 8px}
+.post figure{margin:0 0 24px}
+.post figcaption{font-size:15px;color:var(--muted);margin-top:8px}
+.post .ba{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.post .ba img{width:100%;border-radius:10px;border:1px solid var(--line)}
+.post .ba figcaption{margin-top:6px}
+.post .ba div{margin:0}
+@media (max-width:560px){.post .ba{grid-template-columns:1fr}}
+.post pre{white-space:pre-wrap;word-wrap:break-word;background:var(--bg-soft);border:1px solid var(--line);border-left:5px solid var(--blue);border-radius:10px;padding:16px 18px;margin:0 0 10px;font:inherit;font-size:16px;line-height:1.6;color:#222;user-select:all;-webkit-user-select:all}
+.post .copy-btn{margin:0 0 22px;cursor:pointer;background:#fff;font-family:inherit}
+.post .lang-jump{font-size:15px;color:var(--muted)}
+.post .lang-sep{border:0;border-top:3px solid var(--line);margin:48px 0 8px}
