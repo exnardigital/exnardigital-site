@@ -208,3 +208,17 @@ thead th+th{text-align:center}
 .post .lang-sep{border:0;border-top:3px solid var(--line);margin:48px 0 8px}
 .post .copy-btn{display:inline-block;max-width:100%}
 html,body{max-width:100%;overflow-x:clip}
+/* downloads page (/recursos/) */
+.kits{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;margin:18px 0 8px}
+.kit{display:flex;flex-direction:column;min-width:0}
+.kit h3{margin:0 0 6px;font-size:22px;line-height:1.25;overflow-wrap:break-word}
+.kit .badge{margin:0 0 12px}
+.kit ul{margin:0 0 18px;padding-left:20px}.kit li{margin-bottom:6px;color:#222;font-size:16px}
+.kit .dl-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:auto}
+.kit .dl-note{font-size:14.5px;color:var(--muted);margin:12px 0 0}
+.dl-sec h2{margin:0 0 4px}
+.dl-sec .dl-lead{max-width:720px;margin:0 0 6px}
+.dl-sec+.dl-sec{border-top:3px solid var(--line)}
+.hero .lang-jump{font-size:15px;margin:0}
+.dl-fine{font-size:14.5px;color:var(--muted);max-width:720px;margin:14px 0 0}
+@media (max-width:860px){.kits{grid-template-columns:minmax(0,1fr)}}
